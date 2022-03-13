@@ -25,6 +25,17 @@ namespace Backend
             var index = Search.BinarySearch(testArray, lookingValue);
 
             Console.WriteLine($"Index of valus {lookingValue} is {index}");
+
+            var reader = new FileConsoleReader();
+            try
+            {
+                Console.WriteLine(reader.ReadFileTxt("testFile"));
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
