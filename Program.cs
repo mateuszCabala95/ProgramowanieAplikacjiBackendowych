@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Text.Json;
 
 namespace Backend
 {
@@ -36,6 +38,19 @@ namespace Backend
             {
                 Console.WriteLine(e.Message);
             }
+
+
+            //czas lokalny i globalby
+
+            Console.WriteLine(DateTime.UtcNow);
+            Console.WriteLine(DateTime.Now);
+
+            //konwertowanie c# do json
+            string jsonString = JsonSerializer.Serialize(testArray);
+
+            //json do c#
+            var value  = JsonSerializer.Deserialize<List<int>>(jsonString);
+
         }
     }
 }

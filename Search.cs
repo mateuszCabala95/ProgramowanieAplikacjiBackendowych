@@ -20,13 +20,11 @@ namespace Backend
                 if (value > entry)
                 {
                     index = point + 1;
-                    continue;
                 }
 
                 if (value < entry)
                 {
                     limit = point - 1;
-                    continue;
                 }
 
                 return point;
